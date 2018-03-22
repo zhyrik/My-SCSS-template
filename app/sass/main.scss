@@ -1,0 +1,17 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+
+body{
+    background-color: darkgreen;
+    color: white;
+    font-family: 'tamburin';
+    font-size: 100px;
+}
+.wrap{
+    
+}
+.a{
+    color: black;
+}
+@import "media" ;// Всегда в конце
