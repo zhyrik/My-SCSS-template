@@ -7,18 +7,64 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px){}
+@media only screen and (max-width : 992px){
+    html{font-size: 16px;}
+}
 	
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px){}
+@media only screen and (max-width : 768px){
+    html{font-size: 14px;}
+    
+    .wrap{
+        flex-direction: column;
+        .photo{
+            width: 90%;
+            margin-left: -10%;
+            margin-bottom: 10vw;
+            .img-large{
+                height: 76vw;
+            }
+            .img-small{
+                width: 50vw;
+                height: 64vw;
+            }
+        }
+        .content{
+            width: auto;
+            text-align: center;
+        }
+    }
+    .reverse .photo{
+        margin-right: 0;
+    }
+    
+    
+    .num, .content-text{
+        float: none;
+        width: 100%;
+    }
+    .content-text .h4{
+        font-size: 18px;
+    }
+    
+    #map{
+        height: 100vw;
+        margin: 0;
+        width: 100%;
+    }
+}
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px){}
+@media only screen and (max-width : 480px){
+    html{font-size: 12px;}
+}
 
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px){}
+@media only screen and (max-width : 320px){
+    html{font-size: 8px;}
+}
 	/**/
 
 

@@ -1,17 +1,318 @@
 @import "fonts";
 @import "libs";
 @import "vars";
+@import "reset";
 
+:root{
+    --accent: #000;
+    --text: #fff;
+    --grey: #888;
+}
+html{
+    font-size: 20px;
+}
 body{
-    background-color: darkgreen;
-    color: white;
-    font-family: 'tamburin';
-    font-size: 100px;
+    font-size: 14px;
+    background-color: var(--accent);
+    color: var(--text);
+    font-family: work sans, Arial, sans-serif;
+    line-height: 1.7;
+}
+
+
+.container{
+    max-width: 1500px;
+    padding: 0 10%;
+    margin: 0 auto;
+    z-index: 2;
+}
+img{
+    height: 100%;
+    width: 1005;
+    margin: 0;
+    padding: 0;
+}
+section{
+    margin: 10vw 0;
+}
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+// ---------------- HEADER -------------
+.chang-style{
+    position:absolute;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    .menu{
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: var(--grey);
+            padding: 10px 0;
+            margin: 10px 20px;
+            font-size: 18px;
+            border-bottom: 1px solid var(--grey);
+            transition: 0.3s;
+            &:hover{
+                color: var(--text);
+                border-bottom: 1px solid var(--text);
+            }
+        }
+    }
+    .h1{
+        font-size: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        transform: $skew;
+        letter-spacing: 0.7rem;
+        .in{
+            font-family: playfair display, Times, serif;
+            font-style: italic;
+            text-transform: none;
+        }
+    }
+    .h5{
+        font-size: 1.5rem;
+        font-family: playfair display, Times, serif;
+        transform: $skew;
+        .free{
+            color: $yellow;
+            text-decoration: none;
+            border-bottom: 2px solid var(--grey);
+            &:hover,
+            &:hover .html{
+                color: var(--text);
+                border-bottom: 2px solid var(--text);
+            }
+            .html{
+                text-transform: uppercase;
+                color: $yellow;
+            }
+        } 
+    }
+    .header-down{
+        display: block;
+        margin: 5vh 0;
+        text-align: center;
+        color: var(--grey);
+        text-decoration: none;
+        font-size: 16px;
+        &:hover{
+            color: var(--text);
+        }
+        .down{
+            font-size: 25px;
+            color: $yellow;
+        }
+    }
+}
+// ---------------- /HEADER -------------
+// ---------------- SECTION -------------
+.line{
+    height: 0;
+    border-bottom: 2px solid var(--text);
+    opacity: 0.3;
+    transform: $skew;
+    z-index: 1;
 }
 .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .photo{
+        display: inline-block;
+        width: 50%;
+        .img-large{
+            border-radius: 1rem;
+            background-image: url(../img/work_1_large.jpg);
+            background-size: cover;
+            background-position: top center;
+            position: relative;
+            display: inline-block;
+            line-height: 0;
+            width: 100%;
+            height: 38vw;
+            border: 1px solid var(--text);
+        }
+        .portfolio-img2{
+            background-image: url(../img/work_2_large.jpg);
+        }
+        .portfolio-img3{
+            background-image: url(../img/work_3_large.jpg);
+        }
+        .portfolio-img4{
+                background-image: url(../img/work_4_large.jpg);
+        }
+        .img-small{
+            border-radius: 1rem;
+            overflow: hidden;
+            position: absolute;
+            display: inline-block;
+            line-height: 0;
+            bottom: -10%;
+            right: -10%;
+            width: 25vw;
+            height: 32vw;
+            text-align: center;
+        }
+    }
+    .content {
+        width: 35%;
+        color: var(--text);
+        .h2{
+           font-size: 30px;
+            
+        }
+        p{
+            color: var(--grey);
+            font-size: 16px;
+            padding: 20px 0;
+        }
+        
+        
+    }
+}
+.button{
+            display: inline-block;
+            border: 2px solid var(--text);
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 3px;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: var(--text);
+                color: var(--accent);
+            }
+}
+
+.reverse{
+    flex-direction: row-reverse;
+    .photo{
+        margin-right: 5%;
+    }
+}
+ .portfolio-img2{
+    background-image: url(../img/work_2_large.jpg);
+}
+// ---------------- /SECTION -------------
+// ---------------- FOOTER -------------
+footer{
+    text-align: center;
+    color: var(--grey);
+    font-size: 16px;
+
+    div:first-child{
+        margin-bottom: 10vw;
+        color: red;
+    }
+    p{
+        line-height: 2.5;
+        a{
+            color: $yellow;
+            text-decoration: none;
+            border-bottom: 1px solid var(--grey);
+            transition: 0.3s;
+            &:hover{
+                color: var(--text);
+                border-bottom: 1px solid var(--text);
+            }
+        }
+    }
+    .socials{
+        margin: 30px 0 100px 0 ;
+        a{
+            font-size: 20px;
+            color: var(--grey);
+            padding: 15px;
+            &:hover{
+                color: var(--text);
+            }
+        }
+    }
+}
+// ---------------- /FOOTER -------------
+
+
+
+
+
+
+// ---------------- BIO -----------------
+.num{
+    float: left;
+    vertical-align: top;
+    text-transform: uppercase;
+    padding-bottom: 3vw 0;
+    line-height: 35px;
+    .num-style{
+          color: var(--grey);  
+    }
+}
+.content-text{
+    float: right;
+    width:  80%;
+    color: var(--grey);
+    .h4{
+        font-size: 22px;
+        padding-bottom:  3vw 0;
+    }
+}
+.img-site{
+    width: 80vw;
+    height: 49.5vw;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 10vw;
+}
+
+
+.contact-soc{
+    font-size: 20px;
+    line-height: 2.5;
+    a{
+        color: var(--grey);
+        display: block;
+        text-decoration: none;
+        text-transform: capitalize;
+        &:hover{
+            color: var(--text);
+        }
+        .far, .fab{
+            padding-right: 20px;
+        }
+        .fa-facebook-f{
+            margin-right: 10px;
+        }
+    }
+}
+
+#map{
+    width: 80%;
+    max-width: 1500px;
+    height: 40vw;
+    border-radius: 1rem;
+    margin: 0 10vw;
     
 }
-.a{
-    color: black;
-}
+
+
+
+
+
+
+
+
 @import "media" ;// Всегда в конце
